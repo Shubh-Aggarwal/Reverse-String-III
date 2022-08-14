@@ -1,0 +1,22 @@
+string reverseWords(string s) {
+        int j = 0;
+        int i;
+        for(i=0;i<s.size();i++){
+            if(s[i] == ' '){
+                int k = i - 1;
+                while(j < k){
+                    swap(s[j] , s[k]);
+                    j++;
+                    k--;
+                }
+                j = i + 1;
+            }
+        }
+        i--;
+        while(j < i){
+            swap(s[j] , s[i]);
+            j++;
+            i--;
+        }
+        return s;
+    }
